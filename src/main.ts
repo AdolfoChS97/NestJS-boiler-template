@@ -20,13 +20,11 @@ async function bootstrap() {
   const APP_ORIGIN = configService.get('APP_ORIGIN');
   app.enableCors({ origin: APP_ORIGIN });
   const PORT = configService.get('APP_PORT');
+  const URL = configService.get('APP_URL');
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
-  Logger.log(
-    `Swagger docs running on http://localhost:${PORT}/docs`,
-    'Bootstrap',
-  );
+  Logger.log(`Swagger docs running on ${URL}:${PORT}/docs`, 'Bootstrap');
 
   await app.listen(PORT, () => {
     Logger.log(`Listening on port ${PORT}`, 'Bootstrap');

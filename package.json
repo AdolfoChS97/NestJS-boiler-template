@@ -2,7 +2,10 @@
   "name": "NestJS-boiler-template",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "Adolfo Chafardett",
+    "email": "adolfo1997a@gmail.com"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
