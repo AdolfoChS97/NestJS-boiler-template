@@ -6,4 +6,8 @@ export const setupSchema = Joi.object({
     'number.integer': `PORT must be an integer`,
     'any.required': `PORT is required`,
   }),
+  APP_ORIGIN: Joi.string().required().messages({
+    'string.base': `ORIGIN must be a string`,
+    'any.required': `ORIGIN is required`,
+  }),
 });
