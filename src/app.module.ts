@@ -13,7 +13,7 @@ import { setupSchema } from './schema/setup.schema';
       cache: true,
       validationSchema: setupSchema,
       validationOptions: {
-        allowUnknown: false,
+        allowUnknown: true,
         abortEarly: false,
       },
     }),
