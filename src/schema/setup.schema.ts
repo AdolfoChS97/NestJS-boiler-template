@@ -10,4 +10,8 @@ export const setupSchema = Joi.object({
     'string.base': `ORIGIN must be a string`,
     'any.required': `ORIGIN is required`,
   }),
+  APP_URL: Joi.string().required().messages({
+    'string.base': `URL must be a string`,
+    'any.required': `URL is required`,
+  }),
 });

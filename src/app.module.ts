@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
 import { setupSchema } from './schema/setup.schema';
+import { HealthModule } from './modules/health/health.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { setupSchema } from './schema/setup.schema';
         abortEarly: false,
       },
     }),
+    HealthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
